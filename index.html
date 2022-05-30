@@ -1,0 +1,240 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <title>FitRugby</title>
+</head>
+<body class="grey lighten-3"">
+
+  <!-- NAVBAR -->
+  <nav class="z-depth-0 grey lighten-4">
+    <div class="nav-wrapper container">
+      <a href="#" class="brand-logo">
+        <img src="img/logo.svg" style="width: 180px; margin-top: 10px;">
+      </a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <li class="logged-in" style="display: none;">
+            <a href="#" class="grey-text modal-trigger" data-target="modal-account">Account</a>
+          </li>
+          <li class="logged-in" style="display: none;">
+            <a href="#" class="grey-text" id="logout">Logout</a>
+          </li>
+          <li class="admin" style="display: none;">
+            <a href="#" class="grey-text modal-trigger" data-target="modal-create">Create Workout</a>
+          </li>
+          <li class="logged-out" style="display: none;">
+            <a href="#" class="grey-text modal-trigger" data-target="modal-login">Login</a>
+          </li>
+          <li class="logged-out" style="display: none;">
+            <a href="#" class="grey-text modal-trigger" data-target="modal-signup">Sign up</a>
+          </li>
+        </span>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ADMIN ACTIONS -->
+  <form class="center-align admin-actions admin" style="margin: 40px auto; max-width: 300px; display: none;">
+    <input type="email" placeholder="User email" id="admin-email" required />
+    <button class="btn-small yellow darken-2 z-depth-0">Make admin</button>
+  </form>
+
+  <!-- SIGN UP MODAL -->
+  <div id="modal-signup" class="modal">
+    <div class="modal-content">
+      <h4>Sign up</h4><br />
+      <form id="signup-form">
+        <div class="input-field">
+          <input type="email" id="signup-email" required />
+          <label for="signup-email">Email address</label>
+        </div>
+        <div class="input-field">
+          <input type="password" id="signup-password" required />
+          <label for="signup-password">Choose password</label>
+        </div>
+        <div class="input-field">
+          <input type="text" id="signup-bio" required />
+          <label for="signup-bio">One Line Bio</label>
+        </div>
+        <button class="btn yellow darken-2 z-depth-0">Sign up</button>
+        <p class="error pink-text center-align"></p>
+      </form>
+    </div>
+  </div>
+
+  <!-- LOGIN MODAL -->
+  <div id="modal-login" class="modal">
+    <div class="modal-content">
+      <h4>Login</h4><br />
+      <form id="login-form">
+        <div class="input-field">
+          <input type="email" id="login-email" required />
+          <label for="login-email">Email address</label>
+        </div>
+        <div class="input-field">
+          <input type="password" id="login-password" required />
+          <label for="login-password">Your password</label>
+        </div>
+        <button class="btn yellow darken-2 z-depth-0">Login</button>
+        <p class="error pink-text center-align"></p>
+      </form>
+    </div>
+  </div>
+
+  <!-- ACCOUNT MODAL -->
+  <div id="modal-account" class="modal">
+    <div class="modal-content center-align">
+      <h4>Account details</h4><br />
+      <div class="account-details"></div>
+    </div>
+  </div>
+
+  <!-- CREATE Workout MODAL -->
+  <div id="modal-create" class="modal">
+    <div class="modal-content">
+      <h4>Create Workout</h4><br />
+      <form id="create-form">
+        <div class="input-field">
+          <input type="text" id="title" required>
+          <label for="title">Workout Title</label>
+        </div>
+        <!-- <div class="input-field">
+          <textarea id="color" class="materialize-textarea" required></textarea>
+          <label for="color">Tile Color</label>
+        </div> -->
+        <div class="input-field">
+          <input  id="color" type="search" list="mylist">
+        </div>
+       
+        <div class="input-field">
+          <textarea id="workouta" class="materialize-textarea" required></textarea>
+          <label for="workouta">Workout 1</label>
+        </div>
+        <div class="input-field">
+          <textarea id="workoutb" class="materialize-textarea" ></textarea>
+          <label for="workoutb">Workout 2</label>
+        </div>
+        <div class="input-field">
+          <textarea id="workoutc" class="materialize-textarea" ></textarea>
+          <label for="workoutc">Workout 3</label>
+        </div>
+        <div class="input-field">
+          <textarea id="workoutd" class="materialize-textarea" ></textarea>
+          <label for="workoutd">Workout 4</label>
+        </div>
+        <div class="input-field">
+          <textarea id="workoute" class="materialize-textarea"></textarea>
+          <label for="workoute">Workout 5</label>
+        </div>
+        <div class="input-field">
+          <textarea id="workoutf" class="materialize-textarea" ></textarea>
+          <label for="workoutf">Workout 6</label>
+        </div>
+        <div class="input-field">
+          <textarea id="workoutg" class="materialize-textarea" ></textarea>
+          <label for="workoutg">Workout 7</label>
+        </div>
+        <div class="input-field">
+          <textarea id="workouth" class="materialize-textarea" ></textarea>
+          <label for="workouth">Workout 8</label>
+        </div>
+        <div class="input-field">
+          <textarea id="workouti" class="materialize-textarea" ></textarea>
+          <label for="workouti">Workout 9</label>
+        </div>
+        <div class="input-field">
+          <textarea id="workoutj" class="materialize-textarea" ></textarea>
+          <label for="workoutj">Workout 10</label>
+        </div>
+        <div class="input-field">
+          <textarea id="workoutk" class="materialize-textarea" ></textarea>
+          <label for="workoutk">Workout 11</label>
+        </div>
+        <div class="input-field">
+          <textarea id="workoutl" class="materialize-textarea" ></textarea>
+          <label for="workoutl">Workout 12</label>
+        </div>
+        <div class="input-field">
+          <textarea id="workoutm" class="materialize-textarea" ></textarea>
+          <label for="workoutm">Workout 13</label>
+        </div>
+        <div class="input-field">
+          <textarea id="workoutn" class="materialize-textarea" ></textarea>
+          <label for="workoutn">Workout 14</label>
+        </div>
+        <div class="input-field">
+          <textarea id="workouto" class="materialize-textarea" ></textarea>
+          <label for="workouto">Workout 15</label>
+        </div>
+        <div class="input-field">
+          <textarea id="workoutp" class="materialize-textarea" ></textarea>
+          <label for="workoutp">Workout 16</label>
+        </div>
+        <div class="input-field">
+          <textarea id="workoutq" class="materialize-textarea" ></textarea>
+          <label for="workoutq">Workout 17</label>
+        </div>
+        <div class="input-field">
+          <textarea id="workoutr" class="materialize-textarea" ></textarea>
+          <label for="workoutr">Workout 18</label>
+        </div>
+        <div class="input-field">
+          <textarea id="workouts" class="materialize-textarea" ></textarea>
+          <label for="workouts">Workout 19</label>
+        </div>
+        <div class="input-field">
+          <textarea id="workoutt" class="materialize-textarea" ></textarea>
+          <label for="workoutt">Workout 20</label>
+        </div>
+
+
+
+
+        <button class="btn yellow darken-2 z-depth-0">Create</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Workout LIST -->
+  <div class="container" style="margin-top: 40px;">
+    <ul class="collapsible z-depth-0 workouts" style="border: none;">
+    </ul>
+  </div>
+  <datalist id="mylist">
+    <option value="Red">
+    <option value="Blue">
+    <option value="White">
+ </datalist>
+  <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-functions.js"></script>
+  <script>
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyBAY7igTSHtR4NK4UXmZ8KQQCL-woCAiEM",
+      authDomain: "fitrugby-b0b8c.firebaseapp.com",
+      databaseURL: "https://fitrugby-b0b8c-default-rtdb.asia-southeast1.firebasedatabase.app",
+      projectId: "fitrugby-b0b8c",
+      storageBucket: "fitrugby-b0b8c.appspot.com",
+      messagingSenderId: "883826637450",
+      appId: "1:883826637450:web:c9199e2036e775f5158b73",
+      measurementId: "G-R9P46BHZJ7"
+    };
+  
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    const auth = firebase.auth();
+    const db = firebase.firestore();
+    const functions = firebase.functions();
+    db.settings({ timestampsInSnapshots: true });
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="scripts/auth.js"></script>
+  <script src="scripts/index.js"></script>
+ 
+</body>
+</html>
