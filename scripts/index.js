@@ -12,6 +12,7 @@ const setupUI = (user) => {
     }
     // account info
     db.collection('users').doc(user.uid).get().then(doc => {
+      document.write(user.accountDetails)
       const html = `
         <div>Logged in as ${user.email}</div>
         <div>${doc.data().bio}</div>
